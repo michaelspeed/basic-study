@@ -1,6 +1,6 @@
 import React from 'react';
 // State -> Immutable
-// Prop -> Properties
+// Prop -> Properties this.props
 // this -> Context of the class
 
 // a = 1
@@ -38,12 +38,10 @@ class Hero extends React.Component {
   }
 
   render() {
+    console.log(this.props.some)
     return (
       <div>
-        {this.state.bos ? <h1>Greates Hero is Hulk</h1> :  <h1>Greates Hero is Iron Man</h1>}
-        <button onClick={() => {
-          this.heroChang()
-         }}>Switch</button>
+        {this.props.some ? <h1>Greates Hero is Hulk</h1> :  <h1>Greates Hero is Iron Man</h1>}
       </div>
     )
   }
