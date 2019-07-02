@@ -17,9 +17,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Hero some={this.state.some} />
-        <button onClick={() => {
-          this.setState({some: !this.state.some})
-         }}>Switch</button>
+        
       </div>
     );
   }

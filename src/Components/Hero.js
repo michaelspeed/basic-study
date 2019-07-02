@@ -27,21 +27,41 @@ class Hero extends React.Component {
     bos: false
   }
 
+  componentDidMount() {
+
+  }
+
+  componentWillMount() {
+    
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.bos !== this.state.bos) {
+      return false
+    } else { 
+      return true
+    }
+  }
+
+  componentWillUnmount() {
+    
+  }
+
   heroChang = () => { // <- Arrow head function
     this.setState({
       bos: !this.state.bos
     })
   }
 
-  someFunc = (id) => { 
-    // do something with id
-  }
 
   render() {
-    console.log(this.props.some)
+    console.log(this.state.bos)
     return (
       <div>
-        {this.props.some ? <h1>Greates Hero is Hulk</h1> :  <h1>Greates Hero is Iron Man</h1>}
+        {this.state.bos ? <h1>Greates Hero is Hulk</h1> : <h1>Greates Hero is Iron Man</h1>}
+        <button onClick={() => {
+          this.heroChang()
+         }}>Switch</button>
       </div>
     )
   }
