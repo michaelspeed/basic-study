@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Core from "./Core";
 
 // https://github.com/michaelspeed/basic-study
 
@@ -8,16 +9,11 @@ import './App.css';
 
 class App extends React.Component {
 
-  state = {
-    some: true
-  }
-
   render() { 
     return (
-      <div className="App">
-        <Hero some={this.state.some} />
-        
-      </div>
+      <React.Fragment>
+        <Core/>
+      </React.Fragment>
     );
   }
 }
