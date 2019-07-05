@@ -22,7 +22,7 @@ class Login extends React.Component{
                             margin="normal"
                             type="password"
                         />
-                        <Button variant="outlined" color={"primary"}>
+                        <Button variant="outlined" color={"primary"} onClick={() => this.props.history.push('/dashboard')}>
                             Login
                         </Button>
                         <span style={{marginTop: 10}}>Don't have an account?<a onClick={() => this.props.history.push('/register')} href='javascript:;'>Register</a></span>
