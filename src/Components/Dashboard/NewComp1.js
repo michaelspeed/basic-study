@@ -9,7 +9,7 @@ class NewComp1 extends React.Component {
         return (
             <React.Fragment>
                 <div style={{marginBottom: 20}}>
-                    <button onClick={() => this.props.changeValue(null)}>Press</button>
+                    <button onClick={() => this.props.changeValue("Martina")}>Press</button>
                 </div>
             </React.Fragment>
         )

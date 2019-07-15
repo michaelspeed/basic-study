@@ -10,7 +10,8 @@ export const appReducer = createReducer(initialState , {
     [types.CHANGE](state, action) {
         return {
             ...state,
-            value: state.value + 1
+            value: state.value + 1,
+            newValue: action.payload
         }
     }
 });

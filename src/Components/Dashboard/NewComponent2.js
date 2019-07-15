@@ -11,6 +11,9 @@ class NewComponent2 extends React.Component {
                 <div>
                     <span>{this.props.appReducer.value}</span>
                 </div>
+                <div>
+                    {this.props.appReducer.newValue !== null && <span>{this.props.appReducer.newValue}</span>}
+                </div>
             </React.Fragment>
         )
     }
