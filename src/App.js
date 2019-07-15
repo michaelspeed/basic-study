@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Core from "./Core";
+import {Provider} from "react-redux";
+import store from "./store/store";
 
 // https://github.com/michaelspeed/basic-study
 
@@ -9,10 +11,12 @@ import Core from "./Core";
 
 class App extends React.Component {
 
-  render() { 
+  render() {
     return (
       <React.Fragment>
-        <Core/>
+        <Provider store={store}>
+          <Core/>
+        </Provider>
       </React.Fragment>
     );
   }
